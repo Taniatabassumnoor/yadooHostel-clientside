@@ -12,19 +12,23 @@ import { Button, Container } from "@mui/material";
 const ManageAllFood = () => {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    axios.get(" http://localhost:5000/foods").then((res) => setFoods(res.data));
+    axios
+      .get(" https://floating-mesa-38074.herokuapp.com/foods")
+      .then((res) => setFoods(res.data));
   }, []);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      axios.delete(` http://localhost:5000/foodsdelete/${id}`).then((res) => {
-        if (res.data.deletedCount > 0) {
-          alert("Food deleted");
-          const restData = foods.filter((order) => order._id !== id);
-          setFoods(restData);
-        }
-      });
+      axios
+        .delete(` https://floating-mesa-38074.herokuapp.com/foodsdelete/${id}`)
+        .then((res) => {
+          if (res.data.deletedCount > 0) {
+            alert("Food deleted");
+            const restData = foods.filter((order) => order._id !== id);
+            setFoods(restData);
+          }
+        });
     }
   };
   return (

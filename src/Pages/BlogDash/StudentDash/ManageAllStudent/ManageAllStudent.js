@@ -13,7 +13,7 @@ const ManageAllStudent = () => {
   const [students, setStudents] = useState([]);
   useEffect(() => {
     axios
-      .get(" http://localhost:5000/students")
+      .get(" https://floating-mesa-38074.herokuapp.com/students")
       .then((res) => setStudents(res.data));
   }, []);
 
@@ -21,7 +21,9 @@ const ManageAllStudent = () => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
       axios
-        .delete(` http://localhost:5000/deletestudents/${id}`)
+        .delete(
+          ` https://floating-mesa-38074.herokuapp.com/deletestudents/${id}`
+        )
         .then((res) => {
           if (res.data.deletedCount > 0) {
             alert("Student data deleted");

@@ -13,16 +13,14 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
 import DashboardPort from "../DashboardPort/DashboardPort";
 import Pay from "../Pay/Pay";
-import MyOrder from "../MyOrder/MyOrder";
+
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
+
 import AddProduct from "../AddProduct/AddProduct";
 import useAuth from "../../../Hooks/useAuth";
 
 import Reviews from "../../HomePage/Reviews/Reviews";
-
-import UserAddBlog from "../../BlogDash/User/UserAddBlog/UserAddBlog";
 
 import Foods from "../../BlogDash/Admin/Foods/Foods";
 import AddFood from "../../BlogDash/Admin/AddBlog/AddFood";
@@ -60,21 +58,6 @@ function ResponsiveDrawer(props) {
               ></i>{" "}
               Make Payment
             </Button>
-            <br />
-          </Link>
-
-          <Link className="btn  mb-3" to={`${url}/userblog`}>
-            <Button
-              style={{ color: "#000", fontSize: "15px", fontWeight: "400" }}
-              color="inherit"
-            >
-              {" "}
-              <i
-                style={{ marginRight: "5px", fontSize: "20px" }}
-                className="fab fa-blogger me-2"
-              ></i>
-              Add Food
-            </Button>{" "}
             <br />
           </Link>
 
@@ -164,20 +147,7 @@ function ResponsiveDrawer(props) {
             <br />
           </Link>
 
-          <Link className="btn mb-3" to={`${url}/manageAllOrders`}>
-            <Button
-              style={{ color: "#000", fontSize: "15px", fontWeight: "400" }}
-              color="inherit"
-            >
-              <i
-                style={{ marginRight: "5px", fontSize: "20px" }}
-                className="fas fa-arrows-alt me-1"
-              ></i>{" "}
-              Manage All Blog
-            </Button>{" "}
-            <br />
-          </Link>
-          <Link className="btn mb-3" to={`${url}/manageblogs`}>
+          <Link className="btn mb-3" to={`${url}/managefoods`}>
             <Button
               style={{ color: "#000", fontSize: "15px", fontWeight: "400" }}
               color="inherit"
@@ -307,9 +277,9 @@ function ResponsiveDrawer(props) {
             <Pay />
           </Route>
 
-          <Route path={`${path}/userblog`}>
+          {/* <Route path={`${path}/userblog`}>
             <UserAddBlog />
-          </Route>
+          </Route> */}
 
           <Route path={`${path}/reviews`}>
             <Reviews />
@@ -337,10 +307,10 @@ function ResponsiveDrawer(props) {
             <Distribution />
           </AdminRoute>
 
-          <AdminRoute path={`${path}/manageAllOrders`}>
+          {/* <AdminRoute path={`${path}/manageAllOrders`}>
             <ManageAllOrder />
-          </AdminRoute>
-          <AdminRoute path={`${path}/manageblogs`}>
+          </AdminRoute> */}
+          <AdminRoute path={`${path}/managefoods`}>
             <ManageAllFood />
           </AdminRoute>
         </Switch>

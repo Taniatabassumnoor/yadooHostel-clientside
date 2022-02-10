@@ -17,12 +17,12 @@ const ManageStudent = () => {
   const [isReload, setIsReload] = useState(false);
   useEffect(() => {
     axios
-      .get(`  http://localhost:5000/getstudents`)
+      .get(`https://floating-mesa-38074.herokuapp.com/students`)
       .then((res) => setAllBlogPost(res.data));
   }, [isReload]);
   const handleStatus = (data) => {
     data.status = "Active";
-    const url = `  http://localhost:5000/getstudents/${data._id}`;
+    const url = `https://floating-mesa-38074.herokuapp.com/students/${data._id}`;
     axios
       .put(url, data)
       .then((res) => console.log("Updating order ", res.data))

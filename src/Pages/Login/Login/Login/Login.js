@@ -69,7 +69,7 @@ const Login = () => {
           <Col item xs={12} md={6}>
             <img
               style={{ width: "100%", marginTop: "8%" }}
-              src="https://i.ibb.co/YhnfPf9/side-view-traveling-woman-taking-photograph.jpg"
+              src="https://i.ibb.co/KLqdXxt/8405-Converted.png"
               alt=""
             />
           </Col>

@@ -7,12 +7,14 @@ const AddNewStudent = () => {
   const { register, handleSubmit, reset, setValue } = useForm();
   // onsubmit function
   const onSubmit = (data) => {
-    axios.post(" http://localhost:5000/students", data).then((res) => {
-      if (res.data.insertedId) {
-        setSuccess("Student added successfully");
-        reset();
-      }
-    });
+    axios
+      .post(" https://floating-mesa-38074.herokuapp.com/students", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          setSuccess("Student added successfully");
+          reset();
+        }
+      });
   };
   setValue("status", "InActive");
   return (

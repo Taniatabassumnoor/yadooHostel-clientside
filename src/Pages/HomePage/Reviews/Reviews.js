@@ -27,7 +27,7 @@ const Reviews = () => {
       email: user.email,
     };
     // send to the server
-    fetch(" https://dry-bastion-02316.herokuapp.com/reviews", {
+    fetch(" https://floating-mesa-38074.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -23,7 +23,7 @@ const DashBoardPort = () => {
             <img
               style={{ width: "100%", marginTop: "8%", marginRight: "10%" }}
               className="img-fluid"
-              src="https://i.ibb.co/YhnfPf9/side-view-traveling-woman-taking-photograph.jpg"
+              src="https://i.ibb.co/KLqdXxt/8405-Converted.png"
               alt=""
             />
           </div>

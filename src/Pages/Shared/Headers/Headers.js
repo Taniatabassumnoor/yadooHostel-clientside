@@ -16,7 +16,7 @@ const Headers = () => {
           className="navStyle logo"
           style={{ color: "white" }}
         >
-          Travel Hero
+          Yadoo Hostel
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -28,9 +28,7 @@ const Headers = () => {
             <NavLink className="navStyle" activeStyle={navDesign} to="/home">
               Home
             </NavLink>
-            <NavLink className="navStyle" activeStyle={navDesign} to="/about">
-              About
-            </NavLink>
+
             {user.email && (
               <NavLink
                 className="navStyle"
